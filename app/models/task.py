@@ -3,8 +3,6 @@ from sqlalchemy import INTEGER, String, ForeignKey, Column, BOOLEAN
 from sqlalchemy.orm import relationship
 from app.models import *
 
-# from app.models.user import User
-
 
 class Task(Base):
     __tablename__ = 'tasks'
@@ -18,7 +16,7 @@ class Task(Base):
     slug = Column(String, unique=True)
 
 
-user = relationship('User', back_populates='tasks')
+user = relationship('User', back_populates='task')
 
 from sqlalchemy.schema import CreateTable
 
