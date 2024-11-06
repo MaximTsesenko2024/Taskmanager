@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from routers.user import user_router
-from routers.task import task_router
+from .routers.user import user_router
+from .routers.task import task_router
 
 
 api = FastAPI()
